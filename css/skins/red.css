@@ -1,7 +1,7 @@
 /* Theme Name:The Project - Responsive Website Template
 Author:HtmlCoder
-Author URI:http://www.htmlcoder.me
-Author e-mail:htmlcoder.me@gmail.com
+Author URI:http://www.fangying
+Author e-mail:fangying@gmail.com
 Version:1.1.0
 Created:May 2015
 License URI:http://support.wrapbootstrap.com/
@@ -485,7 +485,7 @@ ul.pagination li.active a,
   color: #c15050;
   border-color: #f7f7f7;
 }
-/* Mega Menu 
+/* Mega Menu
 ------------------------------ */
 header:not(.dark) .mega-menu .menu > li > a:hover i,
 header:not(.dark) .dropdown-menu > li > a:hover i,
@@ -501,7 +501,7 @@ header:not(.dark) .dropdown-menu > li.active > a i {
   border-color: #f7f7f7;
   text-decoration: none;
 }
-/* Arrow for parent menu item 
+/* Arrow for parent menu item
 ------------------------------ */
 .header:not(.dark) .active.dropdown > a:before,
 .header:not(.dark).centered .active.dropdown > a:before {
@@ -716,7 +716,7 @@ header:not(.dark) .dropdown-menu > li.active > a i {
   border: 1px solid #dc5b5b;
   background: #dc5b5b;
 }
-/* Media 
+/* Media
 ---------------------------------- */
 .media:hover .icon {
   background-color: transparent;

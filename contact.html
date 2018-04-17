@@ -8,7 +8,7 @@
 	<meta charset="utf-8">
 	<title>Contact Us - PetsBuddy</title>
 	<meta name="description" content="Contact us">
-	<meta name="author" content="htmlcoder.me">
+	<meta name="author" content="fangying">
 
 	<!-- Mobile Meta -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -258,7 +258,7 @@
 								</div>
 							</div>
 							<div class="col-md-6">
-								<img src="./pimages/c_right.png"/>
+								<img src="./pimages/c_right.png" />
 							</div>
 						</div>
 					</div>
@@ -336,9 +336,9 @@
 	<script type="text/javascript" src="js/custom.js"></script>
 
 
-  <script src="https://smtpjs.com/v2/smtp.js"></script>
-  <script>
-		$('.submit-button').click(function() {
+	<script src="https://smtpjs.com/v2/smtp.js"></script>
+	<script>
+		$('.submit-button').click(function () {
 			var name = $('#name').val();
 			var email = $('#email').val();
 			var subject = $('#subject').val();
@@ -346,17 +346,17 @@
 
 			if (name.length > 0 && email.length > 0 && subject.length > 0 && message.length > 0) {
 				Email.send(email,
-				"customerservice@australiapetindustry.com",
-				subject,
-				message, {
-					token: "91e674e7-db5c-438a-bf2d-642282b1309e"
-				});
+					"customerservice@australiapetindustry.com",
+					subject,
+					message, {
+						token: "91e674e7-db5c-438a-bf2d-642282b1309e"
+					});
 
 				alert('Thank your for your message!');
 				location.reload();
 			}
 		})
-  </script>
+	</script>
 </body>
 
 </html>

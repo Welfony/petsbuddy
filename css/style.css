@@ -1,7 +1,7 @@
 /* Theme Name:The Project - Responsive Website Template
 Author:HtmlCoder
-Author URI:http://www.htmlcoder.me
-Author e-mail:htmlcoder.me@gmail.com
+Author URI:http://www.fangying
+Author e-mail:fangying@gmail.com
 Version:1.1.0
 Created:March 2015
 License URI:http://support.wrapbootstrap.com/
@@ -4822,7 +4822,7 @@ header.full-width .dropdown-menu .dropdown-menu.to-left {
     left: auto!important;
   }
 }
-/* Mega Menu 
+/* Mega Menu
 ------------------------------ */
 .mega-menu.dropdown {
   position: static;
@@ -4907,7 +4907,7 @@ header .dropdown-menu > li.active > a i.fa-circle-o:before {
   border-color: #f7f7f7;
   text-decoration: none;
 }
-/* Arrow for parent menu item 
+/* Arrow for parent menu item
 ------------------------------ */
 .dropdown > a:before {
   font-family: 'FontAwesome';
@@ -4949,7 +4949,7 @@ header .dropdown-menu > li.active > a i.fa-circle-o:before {
 .header.centered:not(.dark) .dropdown .dropdown.open > a:before {
   color: #09afdf;
 }
-/* Dropdown animations 
+/* Dropdown animations
 ------------------------------ */
 .animated.main-navigation .navbar-nav .open .dropdown-menu,
 #offcanvas.animated .open .dropdown-menu,
@@ -6226,7 +6226,7 @@ ul.tweets li span {
   font-size: 12px;
   color: #777777;
 }
-/* Media 
+/* Media
 ---------------------------------- */
 .media {
   margin-top: 0;
