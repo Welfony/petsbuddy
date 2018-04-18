@@ -6821,6 +6821,7 @@ h6.media-heading {
 /*Captions*/
 .tp-caption {
   z-index: 5;
+  font-weight: bold !important;
 }
 .tp-caption a,
 .tp-caption a:hover {
