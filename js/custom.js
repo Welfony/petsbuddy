@@ -22,6 +22,7 @@ $('#submit-post-comment').click(function () {
       });
 
     alert('Thanks for your review!');
+    location.reload();
   }
 
   return false;
