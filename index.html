@@ -39,6 +39,7 @@
   <link href="plugins/owl-carousel/owl.carousel.css" rel="stylesheet">
   <link href="plugins/owl-carousel/owl.transitions.css" rel="stylesheet">
   <link href="plugins/hover/hover-min.css" rel="stylesheet">
+  <link href="plugins/player/mediaelementplayer.css" rel="stylesheet">
 
   <!-- the project core CSS file -->
   <link href="css/style.css" rel="stylesheet">
@@ -522,16 +523,15 @@
         <div class="col-sm-4">
           <div class="image-box shadow text-center mb-20">
             <div class="overlay-container">
-              <img src="pimages/blog10.jpg" alt="">
+              <img src="pimages/blog12-1.jpg" alt="">
               <div class="overlay-top">
                 <div class="text">
-
-                  <p class="small">Trump’s Metal Tariffs May Raise Costs for Canned Pet Food</p>
+                  <p class="small">PetsBuddy in Pet Fair Asia 2018 in Shanghai</p>
                 </div>
               </div>
               <div class="overlay-bottom">
                 <div class="links">
-                  <a href="post-10.html" class="btn btn-gray-transparent btn-animated btn-sm">View Details
+                  <a href="post-12.html" class="btn btn-gray-transparent btn-animated btn-sm">View Details
                     <i class="pl-10 fa fa-arrow-right"></i>
                   </a>
                 </div>
@@ -543,16 +543,15 @@
         <div class="col-sm-4">
           <div class="image-box shadow text-center mb-20">
             <div class="overlay-container">
-              <img src="pimages/blog9.jpg" alt="">
+              <img src="pimages/blog11.jpg" alt="">
               <div class="overlay-top">
                 <div class="text">
-
-                  <p class="small">Research Shows That Long-term Raw Dog Food Diet Will Increase Gut Bacteria Levels</p>
+                  <p class="small">Why a pet owner chooses your pet shop?</p>
                 </div>
               </div>
               <div class="overlay-bottom">
                 <div class="links">
-                  <a href="post-9.html" class="btn btn-gray-transparent btn-animated btn-sm">View Details
+                  <a href="post-11.html" class="btn btn-gray-transparent btn-animated btn-sm">View Details
                     <i class="pl-10 fa fa-arrow-right"></i>
                   </a>
                 </div>
@@ -562,29 +561,98 @@
         </div>
 
         <div class="col-sm-4">
-          <div class="image-box shadow text-center mb-20">
-            <div class="overlay-container">
-              <img src="pimages/blog8-1.jpg" alt="">
-              <div class="overlay-top">
-                <div class="text">
+            <div class="image-box shadow text-center mb-20">
+              <div class="overlay-container">
+                <img src="pimages/blog10.jpg" alt="">
+                <div class="overlay-top">
+                  <div class="text">
 
-                  <p class="small">We Are Just Back from CPFE 2018 in China</p>
+                    <p class="small">Trump’s Metal Tariffs May Raise Costs for Canned Pet Food</p>
+                  </div>
                 </div>
-              </div>
-              <div class="overlay-bottom">
-                <div class="links">
-                  <a href="post-8.html" class="btn btn-gray-transparent btn-animated btn-sm">View Details
-                    <i class="pl-10 fa fa-arrow-right"></i>
-                  </a>
+                <div class="overlay-bottom">
+                  <div class="links">
+                    <a href="post-10.html" class="btn btn-gray-transparent btn-animated btn-sm">View Details
+                      <i class="pl-10 fa fa-arrow-right"></i>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
       </div>
     </section>
     <!-- section end -->
+
+    <!-- video section start -->
+    <section class="pv-30">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <h2 class="text-center">Our
+              <strong>Videoes</strong>
+            </h2>
+            <div class="separator"></div>
+            <p class="lead text-center">
+              Experience PetsBuddy via vivid clips.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <br>
+            <div role="tabpanel">
+              <!-- Tab panes -->
+              <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade in active" id="home">
+                  <div class="embed-responsive embed-responsive-16by9">
+                    <video
+                      id="player_1"
+                      style="max-width:100%;"
+                      poster="pimages/poster-1.png"
+                      preload="none"
+                      controls
+                      playsinline
+                      webkit-playsinline>
+                      <source src="videos/PetsBuddy-Pet-Treats-540.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <br>
+            <div role="tabpanel">
+              <!-- Tab panes -->
+              <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade in active" id="home">
+                  <div class="embed-responsive embed-responsive-16by9">
+                    <video
+                      id="player_1"
+                      style="max-width:100%;"
+                      poster="pimages/poster-2.png"
+                      preload="none"
+                      controls
+                      playsinline
+                      webkit-playsinline>
+                      <source src="videos/PetsBuddy-GoatsMilk-540.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+    </section>
+    <!-- video section end -->
+
     <!-- footer top start -->
     <!-- ================ -->
     <div class="dark-bg  default-hovered footer-top animated-text">
@@ -673,6 +741,9 @@
 
   <!-- Appear javascript -->
   <script type="text/javascript" src="plugins/waypoints/jquery.waypoints.min.js"></script>
+
+  <!-- Player javascript -->
+  <script type="text/javascript" src="plugins/player/mediaelement-and-player.min.js"></script>
 
   <!-- Count To javascript -->
   <script type="text/javascript" src="plugins/jquery.countTo.js"></script>
