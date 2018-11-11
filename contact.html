@@ -366,12 +366,11 @@
 			var message = $('#message').val();
 
 			if (name.length > 0 && email.length > 0 && subject.length > 0 && message.length > 0) {
-				Email.send(email,
-					"customerservice@australiapetindustry.com",
-					subject,
-					message, {
-						token: "91e674e7-db5c-438a-bf2d-642282b1309e"
-					});
+				Email.send(
+        email,
+        'customerservice@australiapetindustry.com', subject, message,
+        'smtp25.elasticemail.com', 'bijiasuo2006@hotmail.com',
+				'9285894d-e8a1-475d-ab87-0c31f1228597');
 
 				alert('Thank your for your message!');
 				location.reload();

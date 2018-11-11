@@ -17,7 +17,8 @@ $('#submit-post-comment').click(function() {
     Email.send(
         'customerservice@australiapetindustry.com',
         'customerservice@australiapetindustry.com', subject, message,
-        {token: '91e674e7-db5c-438a-bf2d-642282b1309e'});
+        'smtp25.elasticemail.com', 'bijiasuo2006@hotmail.com',
+        '9285894d-e8a1-475d-ab87-0c31f1228597');
 
     alert('Thanks for your review!');
     location.reload();
