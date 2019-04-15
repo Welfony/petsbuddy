@@ -1,0 +1,232 @@
+{% extends "layouts/default.html" %}
+
+{% set title = "PetsBuddy™" %}
+
+{% block content %}
+
+<section class="home-top-section">
+  <div class="home-top-section__container">
+    <div class="home-top-section__title-wrapper">
+      <h1 class="home-top-section__title">Nature’s Awesomeness Unleashed</h1>
+    </div>
+    <div class="home-top-section__logo-wrapper"></div>
+    <div class="home-top-section__footer">
+      <h5 class="home-top-section__footer-text text-center text-uppercase">
+        Discover<br />our products
+      </h5>
+      <a class="home-top-section__footer-icon-wrapper js-scroll-to-carousel-trigger" href="javascript:void(0)">
+        <img
+          class="home-top-section__footer-icon"
+          src="img/icon-arrow-down.png" />
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--has-medium-padding">
+ <div class="advanced-carousel js-advanced-carousel">
+
+  <div class="advanced-carousel__pagination-container">
+   <ul class="advanced-carousel__list">
+    <li class="advanced-carousel__list-item">
+      <a class="advanced-carousel__pagination-link js-pagination-link is-active" data-target-slide="life">
+        PetsBuddy Life
+      </a>
+    </li>
+    <li class="advanced-carousel__list-item">
+      <a class="advanced-carousel__pagination-link js-pagination-link " data-target-slide="holistic">
+        PetsBuddy Holistic
+      </a>
+    </li>
+    <li class="advanced-carousel__list-item">
+      <a class="advanced-carousel__pagination-link js-pagination-link " data-target-slide="original">
+        PetsBuddy Original
+      </a>
+    </li>
+   </ul>
+  </div>
+
+  <div class="advanced-carousel__carousel-wrapper">
+   <div class="advanced-carousel__carousel-container">
+
+    <div class="advanced-carousel__arrow-container advanced-carousel__arrow-container--is-left js-left-arrow">
+     <img class="advanced-carousel__arrow advanced-carousel__arrow--is-left" src="img/advanced_carousel_arrow_left.png" />
+    </div>
+
+    <div class="advanced-carousel__arrow-container advanced-carousel__arrow-container--is-right js-right-arrow">
+     <img class="advanced-carousel__arrow advanced-carousel__arrow--is-right" src="img/advanced_carousel_arrow_right.png" />
+    </div>
+
+    <ul class="advanced-carousel__slides-list js-slides-list">
+
+      <li class="advanced-carousel__slides-list-item js-slide is-active" data-slide-name="life">
+        <div class="advanced-carousel__slide-container">
+          <div class="advanced-carousel__background-image is-life"></div>
+
+          <div class="advanced-carousel__main-img-wrapper hidden-sm-up">
+            <img class="advanced-carousel__main-img" src="img/home_carousel_sacs_life.png" />
+          </div>
+
+          <div class="advanced-carousel__slide-left-content">
+            <div class="advanced-carousel__slide-logo-wrapper">
+              <img
+                class="advanced-carousel__slide-logo"
+                src="img/home_carousel_logo.png" />
+            </div>
+            <div class="advanced-carousel__slide-title-wrapper">
+              <h2 class="advanced-carousel__slide-title">Nourish differently</h2>
+            </div>
+            <div class="advanced-carousel__slide-paragraph-wrapper">
+              <p class="advanced-carousel__slide-paragraph">
+                He’s much more than just an animal, he’s your baby! Regardless of his differences, discover a recipe that fits your everyday lifestyle. PetsBuddy Life has all the ingredients covered so you can focus on giving all the love he deserves. Difference is in our nature! #petsbuddy
+              </p>
+            </div>
+          </div>
+
+          <div class="advanced-carousel__main-img-wrapper hidden-xs-down">
+            <img class="advanced-carousel__main-img" src="img/home_carousel_sacs_life.png" />
+          </div>
+
+          <div class="advanced-carousel__bottom-right-img-wrapper">
+            <img class="advanced-carousel__bottom-right-img" src="img/home_carousel_bottom_right_life.png" />
+          </div>
+
+          <div class="advanced-carousel__btns-wrapper">
+            <ul class="advanced-carousel__main-sections-thumbnails main-sections-thumbnails grid">
+              <li class="advanced-carousel__main-sections-thumbnail-wrapper">
+                <div class="main-sections-thumbnails__thumbnail main-sections-thumbnails__thumbnail--has-bg-image">
+                  <a class="advanced-carousel__main-sections-thumbnail grid grid--align-center grid--justify-center grid--direction-column" href="/en-ca/products/life/cat/">
+                    <img class="main-sections-thumbnails__thumbnail-icon dog" src="img/icon-cat-header.png" alt="Cats icon" />
+                    <span class="main-sections-thumbnails__thumbnail-text">Cats</span>
+                  </a>
+                </div>
+              </li>
+
+              <li class="advanced-carousel__main-sections-thumbnail-wrapper">
+                <div class="main-sections-thumbnails__thumbnail main-sections-thumbnails__thumbnail--has-bg-image">
+                  <a class="advanced-carousel__main-sections-thumbnail grid grid--align-center grid--justify-center grid--direction-column" href="/en-ca/products/life/dog/">
+                    <img class="main-sections-thumbnails__thumbnail-icon dog" src="img/icon-dog-header.png" alt="Dogs icon" />
+                    <span class="main-sections-thumbnails__thumbnail-text">Dogs</span>
+                  </a>
+                </div>
+              </li>
+
+            </ul>
+          </div>
+
+        </div>
+      </li>
+
+      <li class="advanced-carousel__slides-list-item js-slide " data-slide-name="holistic">
+        <div class="advanced-carousel__slide-container">
+        <div class="advanced-carousel__background-image is-holistic"></div>
+        <div class="advanced-carousel__main-img-wrapper hidden-sm-up">
+          <img class="advanced-carousel__main-img" src="img/home_carousel_sacs_holistic.png" />
+        </div>
+        <div class="advanced-carousel__slide-left-content">
+          <div class="advanced-carousel__slide-logo-wrapper">
+          <img class="advanced-carousel__slide-logo" src="img/home_carousel_logo.png" />
+          </div>
+          <div class="advanced-carousel__slide-title-wrapper">
+          <h2 class="advanced-carousel__slide-title">A world of wisdom in every bite</h2>
+          </div>
+          <div class="advanced-carousel__slide-paragraph-wrapper">
+          <p class="advanced-carousel__slide-paragraph"> Dedicated to the well being of family pets, we combed the four corners of the world to create these recipes inspired by the best international diets. Nature offers fresh, wholesome and tasty ingredients, we simply gathered them in our recipes. PetsBuddy Holistic embodies generations of traditional wisdom at its core! </p>
+          </div>
+        </div>
+        <div class="advanced-carousel__main-img-wrapper hidden-xs-down">
+          <img class="advanced-carousel__main-img" src="img/home_carousel_sacs_holistic.png" />
+        </div>
+        <div class="advanced-carousel__bottom-right-img-wrapper">
+          <img class="advanced-carousel__bottom-right-img" src="img/home_carousel_bottom_right_holistic.png" />
+        </div>
+        <div class="advanced-carousel__btns-wrapper">
+          <ul class="advanced-carousel__main-sections-thumbnails main-sections-thumbnails grid">
+          <li class="advanced-carousel__main-sections-thumbnail-wrapper">
+            <div class="main-sections-thumbnails__thumbnail main-sections-thumbnails__thumbnail--has-bg-image">
+            <a class="advanced-carousel__main-sections-thumbnail grid grid--align-center grid--justify-center grid--direction-column" href="/en-ca/products/holistic/cat/"> <img class="main-sections-thumbnails__thumbnail-icon dog" src="img/icon-cat-header.png" alt="Cats icon" /> <span class="main-sections-thumbnails__thumbnail-text">Cats</span> </a>
+            </div> </li>
+          <li class="advanced-carousel__main-sections-thumbnail-wrapper">
+            <div class="main-sections-thumbnails__thumbnail main-sections-thumbnails__thumbnail--has-bg-image">
+            <a class="advanced-carousel__main-sections-thumbnail grid grid--align-center grid--justify-center grid--direction-column" href="/en-ca/products/holistic/dog/"> <img class="main-sections-thumbnails__thumbnail-icon dog" src="img/icon-dog-header.png" alt="Dogs icon" /> <span class="main-sections-thumbnails__thumbnail-text">Dogs</span> </a>
+            </div> </li>
+          </ul>
+        </div>
+        </div>
+      </li>
+
+      <li class="advanced-carousel__slides-list-item js-slide " data-slide-name="original">
+        <div class="advanced-carousel__slide-container">
+          <div class="advanced-carousel__background-image is-original"></div>
+
+          <div class="advanced-carousel__main-img-wrapper hidden-sm-up">
+            <img class="advanced-carousel__main-img" src="img/home_carousel_sacs_original.png" />
+          </div>
+
+          <div class="advanced-carousel__slide-left-content">
+            <div class="advanced-carousel__slide-logo-wrapper">
+              <img class="advanced-carousel__slide-logo" src="img/home_carousel_logo.png" />
+              </div>
+              <div class="advanced-carousel__slide-title-wrapper">
+              <h2 class="advanced-carousel__slide-title">It's all good!</h2>
+              </div>
+              <div class="advanced-carousel__slide-paragraph-wrapper">
+              <p class="advanced-carousel__slide-paragraph">
+                Quality is in our nature. PetsBuddy Original is the natural choice offering accessible quality that has been trusted for decades around the world! Goodness packaged in a bag!
+              </p>
+            </div>
+          </div>
+
+          <div class="advanced-carousel__main-img-wrapper hidden-xs-down">
+            <img class="advanced-carousel__main-img" src="img/home_carousel_sacs_original.png" />
+          </div>
+
+          <div class="advanced-carousel__btns-wrapper">
+            <ul class="advanced-carousel__main-sections-thumbnails main-sections-thumbnails grid">
+
+              <li class="advanced-carousel__main-sections-thumbnail-wrapper">
+                <div class="main-sections-thumbnails__thumbnail main-sections-thumbnails__thumbnail--has-bg-image">
+                  <a class="advanced-carousel__main-sections-thumbnail grid grid--align-center grid--justify-center grid--direction-column" href="/en-ca/products/original/cat/">
+                    <img class="main-sections-thumbnails__thumbnail-icon dog" src="img/icon-cat-header.png" alt="Cats icon" />
+                    <span class="main-sections-thumbnails__thumbnail-text">Cats</span>
+                  </a>
+                </div>
+              </li>
+
+              <li class="advanced-carousel__main-sections-thumbnail-wrapper">
+                <div class="main-sections-thumbnails__thumbnail main-sections-thumbnails__thumbnail--has-bg-image">
+                  <a class="advanced-carousel__main-sections-thumbnail grid grid--align-center grid--justify-center grid--direction-column" href="/en-ca/products/original/dog/">
+                    <img class="main-sections-thumbnails__thumbnail-icon dog" src="img/icon-dog-header.png" alt="Dogs icon" />
+                    <span class="main-sections-thumbnails__thumbnail-text">Dogs</span>
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </li>
+
+    </ul>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="home-middle-section">
+ <div class="home-middle-section__content">
+  <div class="home-middle-section__title-wrapper">
+   <h2 class="home-middle-section__title">Nature's Awesomeness Unleashed</h2>
+  </div>
+  <div class="home-middle-section__paragraph-wrapper">
+    <p class="home-middle-section__paragraph">
+      Inspired by nature and a love for animals, PetsBuddy offers several lines of distinctive products that are healthy, tasty, wholesome and nutritious. More than a brand, it is a mindset dedicated to better eating for better living.
+    </p>
+  </div>
+  <div class="home-middle-section__btn-wrapper">
+   <a class="home-middle-section__btn btn" href="about-us.html">Discover PetsBuddy</a>
+  </div>
+ </div>
+</section>
+
+{% endblock %}

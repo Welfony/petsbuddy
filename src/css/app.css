@@ -2365,11 +2365,11 @@ textarea {
     width: 55px;
     height: 55px;
     background-repeat: no-repeat;
-    background-image: url("/static/img/sprites/sprite-call-to-arms.png");
+    background-image: url("../img/sprites/sprite-call-to-arms.png");
     background-size: 110px 110px; }
     @media screen and (-webkit-min-device-pixel-ratio: 2) {
       .icon-text__icon--has-bg {
-        background-image: url("/static/img/sprites/sprite-call-to-arms@2x.png"); } }
+        background-image: url("../img/sprites/sprite-call-to-arms@2x.png"); } }
   .icon-text__icon--has-bg-ingredients {
     background-position: 0 -55px; }
   .icon-text__icon--has-bg-formulas {
@@ -3506,7 +3506,7 @@ textarea {
     padding-bottom: 110px; }
   .banner--has-background-image {
     background-color: transparent;
-    background-image: url("/static/img/background-footer-gradient.jpg");
+    background-image: url("../img/background-footer-gradient.jpg");
     background-size: auto 100%; }
     .banner--has-background-image:before {
       content: '';
@@ -3542,7 +3542,7 @@ textarea {
     .banner--is-taller-xs-down {
       height: 200px; } }
   .banner--has-background-image-blog:before {
-    background-image: url("/static/img/background_blog.jpg");
+    background-image: url("../img/background_blog.jpg");
     background-position: right center; }
     @media screen and (max-width: 1600px) {
       .banner--has-background-image-blog:before {
@@ -3555,28 +3555,28 @@ textarea {
         background-position: 70%; } }
   @media screen and (min-width: 0) {
     .banner--has-background-image-faq:before {
-      background-image: url("/static/img/responsive/background-faq_xs.jpg"); } }
+      background-image: url("../img/responsive/background-faq_xs.jpg"); } }
   @media screen and (min-width: 0) and (-webkit-min-device-pixel-ratio: 2) {
     .banner--has-background-image-faq:before {
-      background-image: url("/static/img/responsive/background-faq_xs@2x.jpg"); } }
+      background-image: url("../img/responsive/background-faq_xs@2x.jpg"); } }
   @media screen and (min-width: 768px) {
     .banner--has-background-image-faq:before {
-      background-image: url("/static/img/responsive/background-faq_sm.jpg"); } }
+      background-image: url("../img/responsive/background-faq_sm.jpg"); } }
   @media screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2) {
     .banner--has-background-image-faq:before {
-      background-image: url("/static/img/responsive/background-faq_sm@2x.jpg"); } }
+      background-image: url("../img/responsive/background-faq_sm@2x.jpg"); } }
   @media screen and (min-width: 992px) {
     .banner--has-background-image-faq:before {
-      background-image: url("/static/img/responsive/background-faq_md.jpg"); } }
+      background-image: url("../img/responsive/background-faq_md.jpg"); } }
   @media screen and (min-width: 992px) and (-webkit-min-device-pixel-ratio: 2) {
     .banner--has-background-image-faq:before {
-      background-image: url("/static/img/responsive/background-faq_md@2x.jpg"); } }
+      background-image: url("../img/responsive/background-faq_md@2x.jpg"); } }
   @media screen and (min-width: 1200px) {
     .banner--has-background-image-faq:before {
-      background-image: url("/static/img/responsive/background-faq_lg.jpg"); } }
+      background-image: url("../img/responsive/background-faq_lg.jpg"); } }
   @media screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2) {
     .banner--has-background-image-faq:before {
-      background-image: url("/static/img/responsive/background-faq_lg@2x.jpg"); } }
+      background-image: url("../img/responsive/background-faq_lg@2x.jpg"); } }
   @media screen and (max-width: 1600px) {
     .banner--has-background-image-faq:before {
       background-position: 10%; } }
@@ -4562,9 +4562,9 @@ textarea {
   .filter-thumbnails--has-no-classes li.is-selected {
     color: white; }
   .filter-thumbnails--has-no-classes li:first-child label:after {
-    background-image: url("/static/img/icon-dog-header.png"); }
+    background-image: url("../img/icon-dog-header.png"); }
   .filter-thumbnails--has-no-classes li:nth-child(2) label:after {
-    background-image: url("/static/img/icon-cat-header.png"); }
+    background-image: url("../img/icon-cat-header.png"); }
 
 .filters-list {
   padding-right: 60px; }
@@ -4628,15 +4628,15 @@ textarea {
     .filters-list__section--has-md-padding {
       padding-bottom: 40px; }
     .filters-list__section--radio label:before {
-      background-image: url("/static/img/icon-radio-unchecked.png"); }
+      background-image: url("../img/icon-radio-unchecked.png"); }
     .filters-list__section--radio label:after {
       opacity: 0;
-      background-image: url("/static/img/icon-radio-checked.png"); }
+      background-image: url("../img/icon-radio-checked.png"); }
     .filters-list__section--checkbox label:before {
-      background-image: url("/static/img/icon-checkbox-unchecked.png"); }
+      background-image: url("../img/icon-checkbox-unchecked.png"); }
     .filters-list__section--checkbox label:after {
       opacity: 0;
-      background-image: url("/static/img/icon-checkbox-checked.png"); }
+      background-image: url("../img/icon-checkbox-checked.png"); }
     .filters-list__section--has-no-classes li + li {
       margin-top: 25px; }
     .filters-list__section--has-no-classes li.is-selected label:before {
@@ -4795,13 +4795,13 @@ textarea {
     .form-thumbnails li:hover:after {
       opacity: 1; } }
   .form-thumbnails li:first-child label:after {
-    background-image: url("/static/img/icon-dog-header.png"); }
+    background-image: url("../img/icon-dog-header.png"); }
   .form-thumbnails li:nth-child(2) label:after {
-    background-image: url("/static/img/icon-cat-header.png"); }
+    background-image: url("../img/icon-cat-header.png"); }
   .form-thumbnails li:nth-child(3) label:after {
     background-position: bottom;
     width: 74px;
-    background-image: url("/static/img/icon-dog-and-cat-header.png"); }
+    background-image: url("../img/icon-dog-and-cat-header.png"); }
 
 .form-thumbnails input {
   display: none; }
@@ -5825,11 +5825,11 @@ textarea {
   .message-panel--has-bg-dog:before {
     z-index: 0;
     background-position: left top;
-    background-image: url("/static/img/background_testimonial_dog.jpg"); }
+    background-image: url("../img/background_testimonial_dog.jpg"); }
   .message-panel--has-bg-cat:before {
     z-index: 0;
     background-position: left top;
-    background-image: url("/static/img/background_testimonial_cat.jpg"); }
+    background-image: url("../img/background_testimonial_cat.jpg"); }
     @media screen and (max-width: 1199px) {
       .message-panel--has-bg-cat:before {
         background-position: 10% 0; } }
@@ -5955,7 +5955,7 @@ textarea {
   .mobile-menu__section-with-background {
     display: block;
     height: 238px;
-    background-image: url("/static/img/responsive/background-food-gradient-to-white-header_sm@2x.jpg");
+    background-image: url("../img/responsive/background-food-gradient-to-white-header_sm@2x.jpg");
     background-size: 120%;
     background-position: bottom right; }
   .mobile-menu__section-content-header-small {

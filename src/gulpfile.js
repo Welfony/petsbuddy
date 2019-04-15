@@ -15,6 +15,7 @@ const responsive = require('gulp-responsive');
 const exec = require('child_process').exec;
 const debug = require('gulp-debug');
 const runSequence = require('run-sequence');
+const twig = require('gulp-twig');
 
 var timestamp = new Date();
 
@@ -129,17 +130,22 @@ gulp.task('responsive-images', function () {
         .pipe(gulp.dest('img/responsive'));
 });
 
+// Compile Twig templates to HTML
+gulp.task('templates', function() {
+    return gulp.src('./template/**/*.html')
+        .pipe(twig())
+        .pipe(gulp.dest('.'));
+});
+
 // launches a static server + watching scss files
-gulp.task('serve', ['sass-dev'], function() {
+gulp.task('serve', ['sass-dev', 'templates'], function() {
 
     browserSync.init({
-        proxy: 'http://localhost:5222',
-        open: true,
-        notify: false
+        server: "."
     });
 
-    gulp.watch(['./sass/**/*.scss'], ['sass-dev']);
-
+    gulp.watch(['./sass/**/*.scss', './template/**/*.html'], ['templates'], ['sass-dev']);
+    gulp.watch(['./*.html', './css/*.css']).on('change', browserSync.reload);
 });
 
 gulp.task('git-add-css-files-to-staging', function (cb) {
