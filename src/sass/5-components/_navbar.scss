@@ -39,90 +39,168 @@
 */
 
 .navbar {
+    position: relative;
     font-size: 1rem;
-    &--position-fixed {
+    background-color: white;
+    z-index: map_get($z-indexes, highest);
+    @media screen and (max-width: map_get($breakpoints-max, xs)) {
+        padding-bottom: 0;
+    }
+    &.is-sticky {
         position: fixed;
         width: 100%;
-    }
-    &__container {
-        @media screen and (max-width: map_get($breakpoints-max, sm)) {
-            flex-direction: column;
+        padding-bottom: 0;
+        background-color: white;
+        z-index: map_get($z-indexes, highest);
+        transform: translateY(-150%);
+        transition: transform map_get($transitions-times, normal);
+        box-shadow: 0 5px 40px rgba(0, 0, 0, 0.2);
+        &.is-sticky-visible {
+            transform: translateY(0);
         }
+    }
+    padding-left: 20px;
+    padding-right: 20px;
+    &__container {
+        padding: 5px 0;
+        height: map_get($others, navbar-height);
     }
     &__mobile-container {
         padding: 1em;
-        background-color: lightblue;
+        background-color: white;
         &-header {
             font-size: 1.5em;
-            color: white;
+            color: black;
         }
     }
-    &__list {
+    &__main-sections-thumbnails {
+        width: map_get($others, navbar-main-sections-thumbnails-width-desktop);
+        height: 100%;
         @media screen and (max-width: map_get($breakpoints-max, sm)) {
-            flex-direction: column;
-        }
-    }
-    &__item-link {
-        display: block;
-        padding: 1em;
-        color: black;
-        text-decoration: none;
-        text-align: center;
-        transition: background-color map_get($transitions-times, normal);
-        &:hover {
-            background-color: #bfbfbf;
-        }
-        @media screen and (max-width: map_get($breakpoints-max, sm)) {
-            text-align: left;
+            width: map_get($others, navbar-main-sections-thumbnails-width-tablet);
         }
     }
     &__hamburger {
-        $hamburger: &;
+        @media screen and (min-width: map_get($breakpoints-min, sm)) {
+            width: map_get($others, navbar-hamburger-btn-width-tablet);
+        }
+        @media screen and (min-width: map_get($breakpoints-min, md)) {
+            width: map_get($others, navbar-hamburger-btn-width-desktop);
+        }
+        @media screen and (max-width: map_get($breakpoints-max, xs)) {
+            margin-left: 20px;
+        }
+    }
+    &__list {
+        height: 100%;
+    }
+    &__middle-section {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 280px;
+    }
+    &__section {
+        height: 100%;
+        &--small {
+            max-width: 37%;
+        }
+    }
+    &__item {
         position: relative;
-        width: 2em;
-        height: 2em;
-        cursor: pointer;
-        &-line {
-            position: absolute;
-            left: 0;
-            display: block;
-            width: 100%;
-            height: 0.35em;
-            background: white;
-            border-radius: 9px;
-            opacity: 1;
-            transform: rotate(0deg);
-            transition: all map_get($transitions-times, normal) ease-in-out;
-            &:nth-child(1) {
-                top: 0;
-            }
-            &:nth-child(2), &:nth-child(3) {
+        height: 100%;
+        &--has-padding {
+            padding: 0 10px;
+        }
+        &--has-separator-after {
+            display: flex;
+            &:before {
+                content: '';
+                position: absolute;
                 top: 50%;
                 transform: translateY(-50%);
-            }
-            &:nth-child(4) {
-                bottom: 0;
+                right: 0;
+                background-color: #718e7f;
+                width: 1px;
+                height: 30px;
             }
         }
-        &.is-opened {
-            #{$hamburger}-line {
-                &:nth-child(1) {
-                    top: 50%;
-                    left: 50%;
-                    width: 0;
-                }
-                &:nth-child(2) {
-                    transform: rotate(45deg);
-                }
-                &:nth-child(3) {
-                    transform: rotate(-45deg);
-                }
-                &:nth-child(4) {
-                    bottom: 50%;
-                    left: 50%;
-                    width: 0;
+        // Trick to hide separator when items are stacked
+        &--has-separator-hider {
+            &:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                transform: translateY(-100%);
+                right: 0;
+                background-color: white;
+                width: 1px;
+                height: 50px;
+            }
+        }
+    }
+    &__item-link {
+        width: 100%;
+        color: black;
+        font-size: 14px;
+        font-weight: 500;
+        text-decoration: none;
+        &--has-padding {
+            padding: 20px 0;
+        }
+        @media screen and (max-width: map_get($breakpoints-max, sm)) {
+            &--has-padding-top-below-desktop {
+                justify-content: space-between;
+                padding-top: 20px;
+            }
+        }
+    }
+    &__item-link-logo {
+        position: relative;
+        z-index: map_get($z-indexes, higher);
+        &--is-big {
+            display: none;
+            top: 30px;
+            max-width: 180px;
+            .is-original-navbar.is-homepage & {
+                @media screen and (min-width: map_get($breakpoints-min, md)) {
+                    display: block;
                 }
             }
+            @media screen and (max-width: map_get($breakpoints-max, xs)) {
+                display: block;
+                top: 0;
+                max-width: 110px;
+            }
+        }
+        &--is-small {
+            max-width: 160px;
+            .is-sticky &  {
+                display: block;
+            }
+            .is-original-navbar.is-homepage & {
+                display: none;
+                @media screen and (max-width: map_get($breakpoints-max, sm)) {
+                    display: block;
+                }
+            }
+        }
+        @media screen and (max-width: map_get($breakpoints-max, sm)) {
+            max-width: 160px;
+        }
+        @media screen and (max-width: map_get($breakpoints-max, xs)) {
+            max-width: 100px;
+        }
+    }
+    &__item-link-logo-full-height {
+        position: relative;
+        z-index: map_get($z-indexes, low);
+        display: block;
+        height: 92px;
+        margin-left: 20px;
+        @media screen and (max-width: map_get($breakpoints-max, sm)) {
+            margin-left: 0;
         }
     }
 }

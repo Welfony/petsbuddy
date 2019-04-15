@@ -20,13 +20,14 @@
 */
 .sidebar {
     position: fixed;
-    top: 0;
-    width: 20%;
-    height: 100%;
-    background-color: lightblue;
+    top: map_get($others, navbar-height);
+    height: calc(100% - #{map_get($others, navbar-height)});
     font-size: 1rem;
-    z-index: map_get($z-indexes, higher);
+    z-index: map_get($z-indexes, highest);
     transition: transform map_get($transitions-times, normal);
+    @media screen and (max-width: map_get($breakpoints-max, xs)) {
+        display: none;
+    }
     &.is-visible {
         transform: translateX(0);
     }
@@ -38,29 +39,104 @@
         right: 0;
         transform: translateX(100%);
     }
-    @media screen and (max-width: map_get($breakpoints-max, md)) {
-        width: 30%;
+    &.is-homepage:before {
+        left: calc(#{map_get($others, navbar-hamburger-btn-width-desktop)} + 9px);
     }
-    @media screen and (max-width: map_get($breakpoints-max, sm)) {
-        width: 40%;
+    &__container {
+        position: relative;
+        width: calc(#{map_get($others, navbar-hamburger-btn-width-desktop)} + (#{map_get($others, navbar-main-sections-thumbnails-width-desktop)}));
+        height: 100%;
+        padding: 60px 40px;
+        background-image: linear-gradient(map_get($colors, gray-darker), black);
+        @media screen and (max-width: map_get($breakpoints-max, sm)) {
+            width: calc(#{map_get($others, navbar-hamburger-btn-width-tablet)} + #{map_get($others, navbar-main-sections-thumbnails-width-tablet)});
+        }
+        @media screen and (max-height: 600px) {
+            padding: 30px 50px;
+            padding-bottom: 10px;
+            justify-content: flex-start;
+        }
     }
-    @media screen and (max-width: map_get($breakpoints-max, xs)) {
-        width: 70%;
+    &__btn-close-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: map_get($others, navbar-hamburger-btn-width-desktop);
+        height: map_get($others, navbar-height);
+        background-color: map_get($colors, gray-darker);
+        transform: translateY(-100%);
+        z-index: map_get($z-indexes, high);
+        .is-homepage & {
+            width: calc(#{map_get($others, navbar-hamburger-btn-width-desktop)} + 10px);
+        }
+        @media screen and (max-width: map_get($breakpoints-max, sm)) {
+            width: map_get($others, navbar-hamburger-btn-width-tablet);
+        }
+    }
+    &__btn-container {
+        margin-top: 65px;
+        @media screen and (max-height: 700px) {
+            margin-top: 20px;
+        }
+    }
+    &__btn {
+        width: 100%;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    &__btn-close {
+        opacity: 0.7;
+        transition: opacity map_get($transitions-times, normal);
+        &:hover {
+            opacity: 1;
+        }
+    }
+    &__btn-close-img {
+        max-width: 25px;
+    }
+    &__btn-group {
+        @media screen and (max-height: 700px) {
+            margin-top: 20px;
+        }
+    }
+    &__btn-group-btn {
+        &:hover {
+            color: map_get($colors, gray-normal);
+        }
     }
     &__list-item {
-        border: solid 1px #dedede;
-        text-align: center;
         & + #{&} {
-            border-top: none;
+            margin-top: 45px;
+            @media screen and (max-height: 700px) {
+                margin-top: 35px;
+            }
+            @media screen and (max-height: 600px) {
+                margin-top: 20px;
+            }
         }
         &-link {
-            display: block;
-            padding: 20px;
+            position: relative;
+            display: inline-block;
             text-decoration: none;
-            color: black;
-            transition: background-color map_get($transitions-times, normal);
-            &:hover {
-                background-color: white;
+            text-transform: uppercase;
+            color: white;
+            @media screen and (min-width: map_get($breakpoints-min, md)) {
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: calc(100% + 10px);
+                    left: 0;
+                    display: block;
+                    width: 0;
+                    height: 2px;
+                    background-color: map_get($colors, gray-light);
+                    transition: width map_get($transitions-times, normal);
+                }
+                &:hover {
+                    &:before {
+                        width: 100%
+                    }
+                }
             }
         }
     }

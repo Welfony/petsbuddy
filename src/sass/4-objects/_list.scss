@@ -2,11 +2,11 @@
     $block: &;
     &__item {
         & + #{&} {
-            #{$block}--is-horizontal & {
-                margin-left: 20px;
+            #{$block}--has-small-spacing & {
+                margin-left: 15px;
             }
-            #{$block}--is-vertical & {
-                margin-top: 20px;
+            #{$block}--has-md-vertical-spacing & {
+                margin-top: 15px;
             }
         }
     }

@@ -1,6 +1,5 @@
-// A skim is an element you add over an image to make the text more lisible
-
 .skim {
+    display: none;
     position: absolute;
     top: 0;
     left: 0;
@@ -8,7 +7,7 @@
     height: 100%;
     background-color: #242425;
     opacity: 0.4;
-    @media screen and (min-width: map_get($breakpoints-min, md)) {
-        display: none;
+    @media screen and (max-width: map_get($breakpoints-max, sm)) {
+        display: block;
     }
 }

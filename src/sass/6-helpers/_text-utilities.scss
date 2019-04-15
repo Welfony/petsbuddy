@@ -9,8 +9,32 @@
     text-align: left!important;
 }
 
+.text-left-sm-up {
+    @media screen and (min-width: map_get($breakpoints-min, sm)) {
+        text-align: left!important;
+    }
+}
+
+.text-left-md-up {
+    @media screen and (min-width: map_get($breakpoints-min, md)) {
+        text-align: left!important;
+    }
+}
+
+.text-center-xs-down {
+    @media screen and (max-width: map_get($breakpoints-max, xs)) {
+        text-align: center!important;
+    }
+}
+
 .text-right {
     text-align: right!important;
+}
+
+.text-right-sm-up {
+    @media screen and (min-width: map_get($breakpoints-min, sm)) {
+        text-align: right!important;
+    }
 }
 
 .text-justify {
@@ -41,6 +65,10 @@
     font-weight: bold;
 }
 
+.font-weight-semi-bold {
+    font-weight: 600;
+}
+
 .font-italic {
     font-style: italic;
 }
@@ -49,6 +77,18 @@
     font-weight: 300;
 }
 
+.font-weight-extra-light {
+    font-weight: 200;
+}
+
+.font-weight-thin {
+    font-weight: 100;
+}
+
 .font-weight-medium {
     font-weight: 500;
+}
+
+.font-weight-black {
+    font-weight: 900;
 }

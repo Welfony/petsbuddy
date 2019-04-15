@@ -22,34 +22,109 @@
 */
 .modal {
     position: fixed;
-    top: 5em;
+    top: 50%;
     left: 50%;
-    width: 35em;
+    width: 560px;
     background-color: white;
-    border-radius: 5px;
     border: solid 1px #dedede;
     font-size: 1rem;
-    z-index: map-get($z-indexes, higher);
+    text-align: center;
+    z-index: map-get($z-indexes, top);
     visibility: hidden;
     opacity: 0;
-    transform: translateX(-50%) scale(0);
+    max-height: 80%;
+    overflow-y: auto;
+    transform: translate(-50%, -50%) scale(0);
     transition: visibility map-get($transitions-times, normal), opacity map-get($transitions-times, normal), transform map-get($transitions-times, normal) cubic-bezier(0.215, 0.61, 0.355, 1) map-get($transitions-times, normal);
+    @media screen and (max-width: map_get($breakpoints-max, xs)) {
+        width: calc(100% - 3em);
+        &--is-full-screen {
+            width: 100%;
+        }
+    }
+    &--is-large {
+        width: 750px;
+        max-width: calc(100% - 40px);
+    }
+    &--has-iframe {
+        -webkit-overflow-scrolling: touch;
+        overflow-y: scroll;
+    }
+    &--has-background-gray {
+        background-color: map_get($colors, gray-lighter-2);
+        background-image: linear-gradient(to bottom, white 0%, map_get($colors, gray-lighter-2) 100%);
+    }
     &.is-visible {
         visibility: visible;
         opacity: 1;
-        transform: translateX(-50%) scale(1);
+        transform: translate(-50%, -50%) scale(1);
         transition: visibility map-get($transitions-times, normal), opacity map-get($transitions-times, normal), transform map-get($transitions-times, normal) cubic-bezier(0.215, 0.61, 0.355, 1) 0.1s;
+        &.modal--is-full-screen {
+            transform: scale(1);
+        }
     }
-    @media screen and (max-width: map_get($breakpoints-max, sm)) {
-        top: 2em;
-        width: calc(100% - 3em);
+    &--is-largest {
+        width: calc(100% - 100px);
+        @media screen and (max-width: map_get($breakpoints-max, xs)) {
+            top: 0;
+            left: 0;
+            transform: scale(0);
+            width: 100%;
+            height: 100%;
+            max-height: none;
+            max-width: none;
+            padding-left: 23px;
+            padding-right: 23px;
+            overflow-y: scroll;
+            -webkit-overflow-scrolling: touch;
+            &.is-visible {
+                transform: scale(1);
+            }
+        }
+    }
+    &__title {
+        font-size: 29px;
+        color: #566d6a;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 60px;
+        &--has-mg-b-smaller {
+            margin-bottom: 30px;
+        }
+    }
+    &__section-title {
+        margin-top: 50px;
+        margin-bottom: 30px;
     }
     &__header {
         padding: 1em;
         border-bottom: solid 1px #dedede;
     }
     &__content {
-        padding: 1em;
+        padding: 110px 90px;
+        &--has-no-padding {
+            padding: 0;
+        }
+        &--has-no-padding-top {
+            padding-top: 0;
+        }
+        &--has-extra-padding-bottom {
+            padding-bottom: 40px;
+        }
+        @media screen and (max-width: map_get($breakpoints-max, xs)) {
+            padding: 20px;
+            padding-top: 80px;
+            &--has-no-padding {
+                padding: 0;
+                padding-bottom: 20px;
+            }
+            &--has-no-padding-top {
+                padding-top: 0;
+            }
+            &--has-extra-padding-bottom {
+                padding-bottom: 40px;
+            }
+        }
     }
     &__footer {
         padding: 1em;
@@ -62,13 +137,62 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 2em;
-        height: 2em;
-        border-radius: 50%;
-        background-color: black;
-        color: white;
+        padding: 20px;
         font-size: 1rem;
         cursor: pointer;
-        transform: translate(50%, -50%);
+        img {
+            width: 25px;
+            height: 25px;
+        }
+        &--is-small {
+            img {
+                width: 16px;
+                height: 16px;
+            }
+        }
+    }
+    &__paragraph {
+        color: #485159;
+        text-align: center;
+        font-weight: 300;
+        line-height: 2;
+    }
+    &__dropdown-container {
+        & + #{&} {
+            margin-top: 20px;
+        }
+    }
+    &__btn {
+        width: 300px;
+        margin-top: 26px;
+        @media screen and (max-width: map_get($breakpoints-max, xs)) {
+            width: 100%;
+        }
+    }
+    &__section {
+        width: 420px;
+        margin: auto;
+        padding-top: 25px;
+        &--has-small-padding-top {
+            padding-top: 20px;
+        }
+        &--is-small {
+            width: 300px;
+        }
+        &-title {
+            position: relative;
+            text-align: center;
+            font-size: 19px;
+            font-weight: bold;
+            color: #485159;
+        }
+        @media screen and (max-width: 479px) {
+            width: auto;
+        }
+    }
+    &__error {
+        display: block;
+        margin-top: 5px;
+        color: red;
     }
 }

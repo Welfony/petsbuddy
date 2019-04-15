@@ -9,19 +9,15 @@
     <form class="form">
         <div class="grid">
             <div class="grid__col-xs-12 grid__col-sm-6">
-                <div class="form__field js-form-field">
-                    <label class="form__field-label js-form-label">Field 1</label>
-                    <div class="form__field-element-container">
-                        <input class="form__field-element js-form-input"/>
-                    </div>
+                <div class="form__input-container js-form-field">
+                    <label class="form__input-container-label js-form-label">Field 1</label>
+                    <input class="form__input js-form-input"/>
                 </div>
             </div>
             <div class="grid__col-xs-12 grid__col-sm-6">
-                <div class="form__field js-form-field">
-                    <label class="form__field-label js-form-label">Field 2</label>
-                    <div class="form__field-element-container">
-                        <input class="form__field-element js-form-input"/>
-                    </div>
+                <div class="form__input-container js-form-field">
+                    <label class="form__input-container-label js-form-label">Field 2</label>
+                    <input class="form__input js-form-input"/>
                 </div>
             </div>
         </div>
@@ -29,38 +25,163 @@
     </form>
 */
 
-$icon-width: 3em;
+$icon-width: 50px;
 $input-and-label-default-font-size: 1em;
 $placeholder-label-scale-ratio: 0.7;
-$field-border-radius: 5px;
 $space-between-scaled-placeholder-and-top-of-field: 5px;
 $space-between-scaled-placeholder-and-input: 5px;
 
 .form {
     font-size: 1rem;
-    &__section-header {
-        width: 100%;
-        padding: 1em 0;
+    width: 100%;
+    &--is-small {
+        max-width: 610px;
     }
-    &__field {
-        $form-field: &;
-        position: relative;
+    &--has-negative-margin {
+        @media screen and (min-width: map_get($breakpoints-min, sm)) {
+            margin-left: -20px;
+            margin-right: -20px;
+        }
+    }
+    &__input-container-wrapper {
+        margin-bottom: 25px;
+        &--has-no-margin {
+            margin-bottom: 0;
+        }
+        &--has-sm-margin-bottom {
+            margin-bottom: 10px;
+        }
+        &--has-md-margin-bottom {
+            margin-bottom: 20px;
+        }
+        @media screen and (min-width: map_get($breakpoints-min, sm)) {
+            padding: 0 15px;
+        }
+    }
+    &__error {
+        color: red;
+    }
+    &__input {
+        width: 100%;
+        height: 45px;
+        padding: 0 20px;
+        font-size: $input-and-label-default-font-size;
+        border: solid #b4b4b4 1px;
+        background-color: transparent;
+        color: white;
+        &--has-gray-border {
+            border-color: map_get($colors, gray-light-2);
+        }
+        &--has-dark-text{
+            color: black;
+            @include placeholder-color(#485159);
+        }
+        &--is-tall {
+            height: 50px;
+        }
+        &--is-taller {
+            height: 60px;
+        }
+        &--is-highlighted {
+            color: #485159;
+            @include placeholder-color(#485159);
+        }
+        &--has-white-placeholder {
+            @include placeholder-color(white);
+        }
+        &--has-v-padding {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        &--has-smaller-padding {
+            padding: 13px;
+        }
+        &--has-bigger-font-size {
+            font-size: 16px;
+            @media screen and (min-width: map_get($breakpoints-min, md)) {
+                font-size: 21px;
+            }
+            @media screen and (max-width: map_get($breakpoints-max, xs)) {
+                font-size: 14px;
+            }
+        }
+        &--has-no-border {
+            border: none;
+        }
+        .form__input-container--has-resizing-placeholder & {
+            @include placeholder-color();
+            border: none;
+            padding: 0;
+            padding-top: calc(#{$input-and-label-default-font-size} * #{$placeholder-label-scale-ratio} + #{$space-between-scaled-placeholder-and-input} + #{$space-between-scaled-placeholder-and-top-of-field});
+            padding-bottom: $space-between-scaled-placeholder-and-input;
+        }
+        .form__input-container--has-icon-right & {
+            padding-right: calc(#{$icon-width} + 5px);
+        }
+        .form__input-container--has-icon-left & {
+            padding-left: calc(#{$icon-width} + 15px);
+            @media screen and (max-width: map_get($breakpoints-max, sm)) {
+                padding-left: 25px;
+            }
+        }
+        .form__input-container--has-checkbox &, .form__input-container--has-radio-btn & {
+            display: none;
+        }
+    }
+    &__input-icon {
+        @extend .absolute-centered-element;
+        @extend .absolute-centered-element--is-centered-vertically;
         display: flex;
-        flex-wrap: wrap;
         align-items: center;
-        margin-bottom: 2em;
-        &.has-error {
+        justify-content: center;
+        width: $icon-width;
+        height: 100%;
+        color: map_get($colors, gray-light-2);
+        text-align: center;
+        cursor: pointer;
+        transition: background-color map_get($transitions-times, normal), color map_get($transitions-times, normal);
+        @media screen and (max-width: map_get($breakpoints-max, sm)) {
+            width: auto;
         }
+        &--is-same-width-sm-down {
+            @media screen and (max-width: map_get($breakpoints-max, sm)) {
+                width: $icon-width;
+            }
+        }
+        &--has-bigger-font-size {
+            font-size: 26px;
+            @media screen and (max-width: map_get($breakpoints-max, sm)) {
+                font-size: 20px;
+            }
+        }
+        &--has-no-border {
+            &:before {
+                display: none;
+            }
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            width: 1px;
+            height: calc(100% - 10px);
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            background-color: map_get($colors, gray-normal);
+        }
+        .form__input-container--has-icon-right & {
+            right: 0;
+        }
+    }
+    &__input-icon-img {
+        width: 25px;
+    }
+    &__input-container{
+        position: relative;
         &--has-resizing-placeholder {
-            width: 80%;
-            padding: 0 1em;
-            border: solid 1px map_get($colors, gray-light);
-            border-radius: $field-border-radius;
-        }
-        &-label {
-            font-size: $input-and-label-default-font-size;
-            margin-bottom: 0.5em;
-            #{$form-field}--has-resizing-placeholder & {
+            padding: 0 15px;
+            border: solid 1px #b4b4b4;
+            label {
                 @extend .absolute-centered-element;
                 @extend .absolute-centered-element--is-centered-vertically;
                 margin-bottom: 0;
@@ -70,113 +191,83 @@ $space-between-scaled-placeholder-and-input: 5px;
                 transform: translateY(-50%) scale(1) perspective(0);
                 transform-origin: 0;
                 transition: top map_get($transitions-times, normal), transform map_get($transitions-times, normal);
+                color: #485159;
                 &.is-focus {
                     top: $space-between-scaled-placeholder-and-top-of-field;
                     transform: translateY(0) scale($placeholder-label-scale-ratio) perspective(1px);
                 }
-                #{$form-field}--has-inline-label & {
-                    margin-bottom: 0;
-                    padding-right: 1em;
-                }
-                #{$form-field}--has-no-label & {
-                    display: none;
-                }
-                #{$form-field}--has-checkbox &, #{$form-field}--has-radio-btn & {
-                    order: 2;
-                    margin-bottom: 0;
-                    &:before {
-                        position: relative;
-                        top: 1px;
-                        display: inline-block;
-                        width: 1em;
-                        margin-right: 0.2em;
-                        font-size: 1.2em;
-                        font-family: FontAwesome, sans-serif;
-                    }
-                }
-                #{$form-field}--has-checkbox & {
-                    &:before {
-                        content: "\f096";
-                    }
-                }
-                #{$form-field}--has-checkbox.is-checked & {
-                    &:before {
-                        content: "\f046";
-                    }
-                }
-                #{$form-field}--has-radio-btn & {
-                    &:before {
-                        content: "\f10c";
-                    }
-                }
-                #{$form-field}--has-radio-btn.is-checked & {
-                    &:before {
-                        content: "\f05d";
-                    }
-                }
-            }
-        }
-        &-element-container {
-            position: relative;
-            width: 100%;
-            #{$form-field}--has-inline-label & {
-                flex: 1;
-            }
-            #{$form-field}--has-checkbox &, #{$form-field}--has-radio-btn & {
-                order: 1;
-                width: auto;
-            }
-        }
-        &-element {
-            width: 80%;
-            padding: 0.8em;
-            font-size: $input-and-label-default-font-size;
-            border: solid 1px map_get($colors, gray-light);
-            border-radius: $field-border-radius;
-            #{$form-field}--has-resizing-placeholder & {
-                border: none;
-                padding: 0;
-                padding-top: calc(#{$input-and-label-default-font-size} * #{$placeholder-label-scale-ratio} + #{$space-between-scaled-placeholder-and-input} + #{$space-between-scaled-placeholder-and-top-of-field});
-                padding-bottom: $space-between-scaled-placeholder-and-input;
-            }
-            #{$form-field}--has-icon-right & {
-                padding-right: calc(#{$icon-width} + 5px);
-            }
-            #{$form-field}--has-icon-left & {
-                padding-left: calc(#{$icon-width} + 5px);
-            }
-            #{$form-field}--has-checkbox &, #{$form-field}--has-radio-btn & {
-                display: none;
-            }
-            &-icon {
-                @extend .absolute-centered-element;
-                @extend .absolute-centered-element--is-centered-vertically;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                height: 100%;
-                width: $icon-width;
-                background-color: lightblue;
-                color: white;
-                text-align: center;
-                #{$form-field}--has-icon-left & {
-                    left: 0;
-                    border-top-left-radius: $field-border-radius;
-                    border-bottom-left-radius: $field-border-radius;
-                }
-                #{$form-field}--has-icon-right & {
-                    right: 0;
-                    border-top-right-radius: $field-border-radius;
-                    border-bottom-right-radius: $field-border-radius;
-                }
             }
         }
     }
-    &__btn {
-        padding: 1em;
+    &__number-input-spinner {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 25px;
+        height: 100%;
+        border-left: solid 1px map_get($colors, gray-light-2);
+        cursor: pointer;
+        background-color: white;
+        &-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            height: 50%;
+            font-size: 18px;
+            &--has-border-top {
+                border-top: solid 1px map_get($colors, gray-light-2);
+            }
+        }
     }
-    &__well {
-        padding: 1em;
-        background-color: lightblue;
+    &__spacer {
+        height: 20px;
+    }
+    &__label {
+        &--is-highlighted {
+            color: #485159;
+        }
+        .form__input-container--has-checkbox &, .form__input-container--has-radio-btn & {
+            order: 2;
+            margin-bottom: 0;
+            &:before {
+                position: relative;
+                top: 2px;
+                display: inline-block;
+                width: 1em;
+                margin-right: 0.2em;
+                font-size: 1.3em;
+                font-family: FontAwesome, sans-serif;
+                color: map_get($colors, gray-lighter);
+                transition: color map_get($transitions-times, normal);
+            }
+        }
+        .form__input-container--has-checkbox & {
+            &:before {
+                content: "\f096";
+            }
+        }
+        .form__input-container--has-checkbox.is-selected & {
+            &:before {
+                content: "\f14a";
+                color: #718e7f;
+            }
+        }
+        .form__input-container--has-radio-btn & {
+            &:before {
+                content: "\f10c";
+            }
+        }
+        .form__input-container--has-radio-btn.is-selected & {
+            &:before {
+                content: "\f05d";
+            }
+        }
+        .form__input-container.has-error & {
+            color: map_get($colors, red-normal);
+        }
     }
 }
