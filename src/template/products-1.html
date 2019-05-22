@@ -7,11 +7,7 @@
 <div class="banner banner--no-fixed-height">
   <div class="banner__container grid grid--justify-center grid--align-end">
     <div class="banner__logo-wrapper">
-      <img
-        class="banner__logo"
-        src="img/logo_blanc_holistic.png"
-        alt="Pronature Holistic logo"
-      >
+      <img class="banner__logo" src="img/logo_blanc_holistic.png" alt="Pronature Holistic logo">
     </div>
     <div class="banner__title-wrapper">
       <h2 class="banner__header header header--is-color-white header--is-normal-size-2 font-weight-extra-light">
@@ -22,7 +18,8 @@
 </div>
 
 <div class="container container--has-padding-mobile">
-  <div class="section section--has-medium-padding-top section--has-big-padding-bottom section--has-smaller-padding-bottom-mobile">
+  <div
+    class="section section--has-medium-padding-top section--has-big-padding-bottom section--has-smaller-padding-bottom-mobile">
     <div class="title-content">
       <a name="list"></a>
       <h3 class="header font-weight-extra-light header--is-smaller-mobile text-left-md-up title-content__title">
@@ -34,20 +31,24 @@
         {% for value in products %}
         <!-- Product begin -->
         <div class="cards-list__card-wrapper grid__col-12 grid__col-sm-4">
-          <a
-            class="cards-list__card card card--has-padding-bottom grid grid--direction-column grid--align-center invisible js-card js-product animated"
+          <a class="cards-list__card card card--has-padding-bottom grid grid--direction-column grid--align-center invisible js-card js-product animated"
             href="product-1.html">
 
             <div class="card__img-container card__img-container--is-higher-on-hover">
               <picture>
-                <source media="(min-width: 0px)" srcset="media/thumbnails/225x312__centers/product/images/pnh_fiche-produit_nordiko_dog.png, media/thumbnails/450x624__centers/product/images/pnh_fiche-produit_nordiko_dog.png 2x" type="image/png">
+                <source media="(min-width: 0px)"
+                  srcset="media/thumbnails/225x312__centers/product/images/pnh_fiche-produit_nordiko_dog.png, media/thumbnails/450x624__centers/product/images/pnh_fiche-produit_nordiko_dog.png 2x"
+                  type="image/png">
 
-                <img class="card__img js-product-img" src="media/thumbnails/225x312__centers/product/images/pnh_fiche-produit_nordiko_dog.png" alt="Product Image">
+                <img class="card__img js-product-img"
+                  src="media/thumbnails/225x312__centers/product/images/pnh_fiche-produit_nordiko_dog.png"
+                  alt="Product Image">
               </picture>
             </div>
 
             <div class="card__title">
-              <h2 class="card__header card__header--is-gray-on-hover header header--is-small-size font-weight-bold text-uppercase">
+              <h2
+                class="card__header card__header--is-gray-on-hover header header--is-small-size font-weight-bold text-uppercase">
                 {{ value }}
               </h2>
 

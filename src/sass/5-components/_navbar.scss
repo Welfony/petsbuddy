@@ -74,7 +74,7 @@
         }
     }
     &__main-sections-thumbnails {
-        width: map_get($others, navbar-main-sections-thumbnails-width-desktop);
+        width: 354px;
         height: 100%;
         @media screen and (max-width: map_get($breakpoints-max, sm)) {
             width: map_get($others, navbar-main-sections-thumbnails-width-tablet);

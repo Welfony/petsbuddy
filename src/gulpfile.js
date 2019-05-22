@@ -144,7 +144,8 @@ gulp.task('serve', ['sass-dev', 'templates'], function() {
         server: "."
     });
 
-    gulp.watch(['./sass/**/*.scss', './template/**/*.html'], ['templates'], ['sass-dev']);
+    gulp.watch(['./sass/**/*.scss'], ['sass-dev']);
+    gulp.watch(['./template/**/*.html'], ['templates']);
     gulp.watch(['./*.html', './css/*.css']).on('change', browserSync.reload);
 });
 

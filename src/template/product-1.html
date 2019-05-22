@@ -1,13 +1,15 @@
 {% extends "layouts/default.html" %}
 {% set title = "Goatsmilk - PetsBuddy" %}
-{% set back_url = "products-1.html" %}
+{% set page = {
+  back_url: "products-1.html"
+} %}
 
 {% block content %}
 
 <div class="banner banner--has-fixed-height banner--has-dynamic-background-image banner--has-darker-bg"
   style="background-image: url(media/thumbnails/3840x1080s/product/banner_images/pnl_entete_infinitichien.jpg);">
   <div class="banner__back-btn-wrapper">
-    <a href="{{ back_url }}">
+    <a href="{{ page.back_url }}">
       <div class="banner__back-btn back-btn">
         <img class="back-btn__img" src="img/icon-back-white.png" alt="Back Button">
         <span class="back-btn__text">back</span>
@@ -58,6 +60,82 @@
     </div>
   </div>
 </div>
+
+
+<section class="section section--has-smaller-padding-bottom section--has-smaller-padding-top-below-desktop">
+  <div class="container container--has-padding-mobile">
+    <div class="grid">
+      <div class="grid__col-12 grid__col-md-5">
+        <p class="description text-center-xs-down">Your cat is now an adult. This delicious chicken recipe is formulated
+          and balanced to keep him fit and healthy!</p>
+        <div class="grid grid--align-center">
+          <div class="grid grid--align-center grid--justify-center">
+            <picture>
+            </picture>
+          </div>
+        </div>
+      </div>
+      <div class="grid__col-12 grid__col-md-7">
+        <div class="horizontal-infos">
+          <div class="horizontal-infos__item grid grid--align-center">
+            <div class="horizontal-infos__img-wrapper grid__col-auto">
+              <svg id="0cbad54a-021e-44bc-b7a7-e44cfe14606e" data-name="addf91ab-0b46-4fc8-835e-7d642877954c"
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28.21 31.77">
+                <defs></defs>
+                <path class="2ba8a852-d251-4bdd-9300-0f3d50f6b8b6"
+                  d="M6.57,25.55C7.5,22.14,11.35,12,24.17,4.33A263.75,263.75,0,0,0,6.57,25.55"></path>
+                <path class="2ba8a852-d251-4bdd-9300-0f3d50f6b8b6"
+                  d="M17,18s4.78-4,7.1-4.56c-1.57,3.37-4.25,4-7.1,4.56"></path>
+                <path class="2ba8a852-d251-4bdd-9300-0f3d50f6b8b6"
+                  d="M11.37,26s5.72-4,10.5-4.94c-3.5,4.58-7.08,4.4-10.5,4.94"></path>
+                <path class="2ba8a852-d251-4bdd-9300-0f3d50f6b8b6"
+                  d="M8.43,6.55C8.45,15.64,7.09,18,7.09,18S4.85,13.17,8.43,6.55"></path>
+                <path class="2ba8a852-d251-4bdd-9300-0f3d50f6b8b6"
+                  d="M15.47,4c0,3-2.61,6.46-2.61,6.46S12.58,5.6,15.47,4"></path>
+                <path class="2ba8a852-d251-4bdd-9300-0f3d50f6b8b6"
+                  d="M12.47,31.77H11.38a10.56,10.56,0,0,1-8-3.73h0l-.46-.69C1,24.72.05,21.24.07,17,0,5.56,6.39,0,19.38,0H27.6V3.24c.1,9.2.21,19.62-5,24.9C20.22,30.59,16.88,31.77,12.47,31.77ZM3.93,27.54A9.81,9.81,0,0,0,11.37,31c4.78.21,8.26-.9,10.65-3.35,5-5,4.84-15.3,4.78-24.35V.79l-7.43,0C6.9.77.84,6.08.78,17c0,4,.89,7.35,2.7,9.86Z">
+                </path>
+              </svg>
+            </div>
+            <div class="grid__col-auto">
+              <h4 class="horizontal-infos__title header header--is-smallest-size text-left">Hairball Control</h4>
+              <p class="horizontal-infos__description">
+                A blend of herbs that helps prevent hairball formation.
+              </p>
+            </div>
+          </div>
+          <div class="horizontal-infos__item grid grid--align-center">
+            <div class="horizontal-infos__img-wrapper grid__col-auto">
+              <svg id="0cbad54a-021e-44bc-b7a7-e44cfe14606e" data-name="addf91ab-0b46-4fc8-835e-7d642877954c"
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28.21 31.77">
+                <defs></defs>
+                <path class="2ba8a852-d251-4bdd-9300-0f3d50f6b8b6"
+                  d="M6.57,25.55C7.5,22.14,11.35,12,24.17,4.33A263.75,263.75,0,0,0,6.57,25.55"></path>
+                <path class="2ba8a852-d251-4bdd-9300-0f3d50f6b8b6"
+                  d="M17,18s4.78-4,7.1-4.56c-1.57,3.37-4.25,4-7.1,4.56"></path>
+                <path class="2ba8a852-d251-4bdd-9300-0f3d50f6b8b6"
+                  d="M11.37,26s5.72-4,10.5-4.94c-3.5,4.58-7.08,4.4-10.5,4.94"></path>
+                <path class="2ba8a852-d251-4bdd-9300-0f3d50f6b8b6"
+                  d="M8.43,6.55C8.45,15.64,7.09,18,7.09,18S4.85,13.17,8.43,6.55"></path>
+                <path class="2ba8a852-d251-4bdd-9300-0f3d50f6b8b6"
+                  d="M15.47,4c0,3-2.61,6.46-2.61,6.46S12.58,5.6,15.47,4"></path>
+                <path class="2ba8a852-d251-4bdd-9300-0f3d50f6b8b6"
+                  d="M12.47,31.77H11.38a10.56,10.56,0,0,1-8-3.73h0l-.46-.69C1,24.72.05,21.24.07,17,0,5.56,6.39,0,19.38,0H27.6V3.24c.1,9.2.21,19.62-5,24.9C20.22,30.59,16.88,31.77,12.47,31.77ZM3.93,27.54A9.81,9.81,0,0,0,11.37,31c4.78.21,8.26-.9,10.65-3.35,5-5,4.84-15.3,4.78-24.35V.79l-7.43,0C6.9.77.84,6.08.78,17c0,4,.89,7.35,2.7,9.86Z">
+                </path>
+              </svg>
+            </div>
+            <div class="grid__col-auto">
+              <h4 class="horizontal-infos__title header header--is-smallest-size text-left">Cranberries</h4>
+              <p class="horizontal-infos__description">
+                Cranberries are known for the role prevention of urinary tract infections.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section
   class="section section--has-medium-padding section--has-small-padding-bottom section--has-smaller-padding-top-mobile">
@@ -238,8 +316,7 @@
                         class="complex-table__cell complex-table__cell--is-padded-both-sides complex-table__cell--is-padded-both-sides complex-table__cell--has-no-t-padding complex-table__cell--has-no-b-padding complex-table__cell--is-colored-pale icon-text js-table-footer"
                         colspan="4">
                         <div class="complex-table__footer-row">
-                          <img class="icon-text__icon icon-text__icon--is-bigger inline-block"
-                            src="img/icon-cup.png" />
+                          <img class="icon-text__icon icon-text__icon--is-bigger inline-block" src="img/icon-cup.png" />
                           <span class="text-center font-italic font-weight-light inline-block"> A standard 250 ml (8 oz)
                             <br />measuring cup = 115 g </span>
                         </div>
@@ -413,8 +490,7 @@
                         class="complex-table__cell complex-table__cell--is-padded-both-sides complex-table__cell--is-padded-both-sides complex-table__cell--has-no-t-padding complex-table__cell--has-no-b-padding complex-table__cell--is-colored-pale icon-text js-table-footer"
                         colspan="4">
                         <div class="complex-table__footer-row">
-                          <img class="icon-text__icon icon-text__icon--is-bigger inline-block"
-                            src="img/icon-cup.png" />
+                          <img class="icon-text__icon icon-text__icon--is-bigger inline-block" src="img/icon-cup.png" />
                           <span class="text-center font-italic font-weight-light inline-block"> A standard 250 ml (8 oz)
                             <br />measuring cup = 115 g </span>
                         </div>
@@ -586,8 +662,7 @@
                         class="complex-table__cell complex-table__cell--is-padded-both-sides complex-table__cell--is-padded-both-sides complex-table__cell--has-no-t-padding complex-table__cell--has-no-b-padding complex-table__cell--is-colored-pale icon-text js-table-footer"
                         colspan="4">
                         <div class="complex-table__footer-row">
-                          <img class="icon-text__icon icon-text__icon--is-bigger inline-block"
-                            src="img/icon-cup.png" />
+                          <img class="icon-text__icon icon-text__icon--is-bigger inline-block" src="img/icon-cup.png" />
                           <span class="text-center font-italic font-weight-light inline-block"> A standard 250 ml (8 oz)
                             <br />measuring cup = 115 g </span>
                         </div>
