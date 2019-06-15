@@ -125,7 +125,7 @@ $(function () {
         });
 
         $('.js-subnavbar-trigger').click(function(e) {
-
+            alert("1");
             e.preventDefault();
             e.stopPropagation();
 
@@ -160,14 +160,12 @@ $(function () {
         });
 
         $('.js-mobile-submenu-trigger').click(function (e) {
-
             e.preventDefault();
             e.stopPropagation();
 
             var $openedSubMenu = $('.js-mobile-submenu.' + classToToggle);
             var subMenuId = $(this).data('submenu-id');
             var $subMenuToOpen = $('#' + subMenuId);
-
             if($openedSubMenu.length > 0 && $openedSubMenu.attr('id') === subMenuId) {
                 $openedSubMenu
                     .hide()
@@ -196,7 +194,6 @@ $(function () {
         });
 
         $('.js-mobile-menu-back-btn').click(function (e) {
-
             e.preventDefault();
             e.stopPropagation();
 

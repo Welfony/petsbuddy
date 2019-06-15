@@ -18,18 +18,17 @@
         <div class="grid__col-12 grid__col-sm-6">
           <div
             class="footer__item footer__item--is-bottom-on-mobile grid grid--justify-space-between grid--direction-column">
-            <h2 class="header header--is-color-white header--is-smaller-size-4 font-weight-light">Let's stay in touch!
+            <h2 class="header header--is-color-white header--is-smaller-size-4 font-weight-light">Let’s stay in touch!
             </h2>
-            <p class="footer__paragraph">
-              Subscribe today to our PetsBuddy newsletter and be the first to find out about new innovative products,
-              exclusive promotions and exciting contests.
+            <p class="footer__paragraph" style="margin-top: 49px; margin-bottom:73px;">
+              Thanks for your support. We would love to hear from you. If you have any question, please leave your email box and we will be in touch!
             </p>
-            <div class="form">
+            <div class="form footer_form">
               <div class="form__input-container form__input-container--has-icon-right">
-                <input class="form__input form__input--has-white-placeholder js-footer-email-input"
-                  placeholder="ENTER YOUR EMAIL" />
-                <a class="form__input-icon form__input-icon--is-same-width-sm-down js-open-newsletters-iframe-btn"
-                  href="javascript:void(0)" data-modal-id="modal-newsletter">
+                <input class="form__input form__input--has-white-placeholder"
+                  placeholder="ENTER YOUR EMAIL" style="cursor:pointer" />
+                <a class="form__input-icon form__input-icon--is-same-width-sm-down"
+                  href="javascript:;" data-modal-id="modal-newsletter">
                   <img class="form__input-icon-img" src="img/icon-search.png" alt="Search icon" />
                 </a>
               </div>
@@ -81,3 +80,8 @@
     </div>
   </div>
 </footer>
+<script>
+  $(".footer_form").click(function(){
+    window.location.href="contact-us.html";
+  })
+</script>
